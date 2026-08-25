@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=JetBrains+Mono:wght@400;500&family=Chakra+Petch:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent: #FF5C00;
+  --bg: #0a0a0a;
+  --surface: #111111;
+  --border: #1e1e1e;
+  --text: #e0e0e0;
+  --muted: #555555;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: auto; /* Lenis handles this */
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+@media (pointer: fine) {
+  body {
+    cursor: none;
+  }
+}
+
+/* Custom cursor */
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  mix-blend-mode: difference;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255, 92, 0, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99998;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Avengers Metallic A Logo */
+.avengers-logo {
+  position: relative;
+  font-size: 2.8rem;
+  font-weight: 900;
+  font-family: 'Arial Black', sans-serif;
+  line-height: 1;
+  background: linear-gradient(
+    145deg,
+    #0b4ea8 0%,
+    #1e73d8 20%,
+    #0d3c89 40%,
+    #4ba3ff 60%,
+    #0f5fcc 80%,
+    #072b63 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.7));
+}
+
+.avengers-logo::before {
+  content: "A";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  color: transparent;
+  -webkit-text-stroke: 3px #d89a32;
+  filter:
+    drop-shadow(0 0 3px rgba(255,190,80,0.5))
+    drop-shadow(0 0 8px rgba(255,170,0,0.35));
+}
+
+.avengers-logo::after {
+  content: "A";
+  position: absolute;
+  inset: 0;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255,220,150,0.9);
+  mix-blend-mode: screen;
+  opacity: 0.9;
+}
+
+.avengers-logo-wrap {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avengers-shine {
+  position: absolute;
+  width: 20px;
+  height: 120%;
+  top: -10%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.4),
+    transparent
+  );
+  transform: skewX(-20deg);
+  animation: avengers-shine 4s linear infinite;
+  filter: blur(3px);
+  pointer-events: none;
+}
+
+@keyframes avengers-shine {
+  0% { left: -30%; }
+  100% { left: 130%; }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Selection */
+::selection {
+  background: var(--accent);
+  color: #000;
+}
+
+/* Section label style */
+.section-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* Skill bar */
+.skill-bar-fill {
+  height: 1px;
+  background: var(--accent);
+  transform-origin: left;
+}
+
+/* Noise texture overlay */
+.noise {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 128px 128px;
+}
+
+/* Horizontal line divider */
+.divider {
+  height: 1px;
+  background: var(--border);
+  width: 100%;
+}
+
+/* Orange glow */
+.glow-accent {
+  text-shadow: 0 0 40px rgba(255, 92, 0, 0.4);
+}
+
+/* Watermark text */
+.watermark {
+  font-family: 'Bebas Neue', cursive;
+  position: absolute;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.04);
+  user-select: none;
+  pointer-events: none;
+  line-height: 1;
+}
+
+/* Hide Next.js dev indicator */
+[data-nextjs-dialog-overlay],
+[data-nextjs-toast],
+nextjs-portal {
+  display: none !important;
+}
+
+/* Hero entrance animations */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.hero-slide-left {
+  animation: slideInFromLeft 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0.1s both;
+}
+
+.hero-slide-right {
+  animation: slideInFromRight 1.4s cubic-bezier(0.25, 0.1, 0.25, 1) 0.3s both;
+}
+
+/* Liquid Retina Glass Animation */
+@keyframes liquidBlob {
+  0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  33% { transform: translate(5vw, -5vh) scale(1.1) rotate(10deg); }
+  66% { transform: translate(-3vw, 4vh) scale(0.9) rotate(-5deg); }
+  100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+}
+
+.glass-orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: -2;
+  opacity: 0.3;
+  pointer-events: none;
+  will-change: transform;
+}

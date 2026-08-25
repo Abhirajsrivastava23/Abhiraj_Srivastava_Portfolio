@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST="{\"components/layout/SmoothScrollProvider.tsx -> lenis\":{\"id\":\"components/layout/SmoothScrollProvider.tsx -> lenis\",\"files\":[\"static/chunks/_app-pages-browser_node_modules_lenis_dist_lenis_mjs.js\"]}}"
