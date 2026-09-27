@@ -1,4 +1,4 @@
-# Anjila Portfolio Clone
+# Aditya Portfolio Clone
 
 Pixel-accurate Next.js 15 clone of anjicodes.co/cv
 
