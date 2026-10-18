@@ -19,12 +19,12 @@ export function PassionSection() {
     restDelta: 0.001,
   });
 
-  const opacity = useTransform(smoothProgress, [0, 0.1, 0.9, 1], [0, 1, 1, 0]);
+  const opacity = useTransform(smoothProgress, [0, 0.1], [0.7, 1]);
 
   return (
     <section
       ref={ref}
-      className="relative py-32 overflow-hidden flex items-center justify-center min-h-[120vh]"
+      className="relative py-20 overflow-hidden flex items-center justify-center"
       style={{ backgroundColor: "#0a0a0a" }}
     >
       {/* Gradient top */}

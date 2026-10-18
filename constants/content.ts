@@ -3,22 +3,24 @@
 // ============================================================
 
 export const siteConfig = {
-  name: "ADITYA",
-  fullName: "Aditya Raj",
+  name: "ABHIRAJ",
+  fullName: "Abhiraj Srivastava",
   title: "Aspiring Software & AI/ML Engineer",
   tagline: "Every expert was once a beginner.",
-  email: "23rajaditya@gmail.com",
-  location: "India",
-  resumeUrl: "/Aditya_Raj_Resume.pdf",
+  email: "abhirajsrivastava6264@gmail.com",
+  phone: "+91 8707296264",
+  location: "U.P. Lucknow, India",
+  resumeUrl: "/Abhiraj_Srivastava_CV.pdf",
   socials: {
-    github: "https://github.com/rajadityaaa23",
-    linkedin: "https://www.linkedin.com/in/rajadityaaa23/",
-    twitter: "https://x.com/rajadityaaa23",
-    instagram: "https://www.instagram.com/rajadityaaa23",
-    leetcode: "https://leetcode.com/u/rajadityaaa23/",
-    hackerrank: "https://www.hackerrank.com/profile/rajadityaaa23",
-    codechef: "https://www.codechef.com/users/rajadityaaa23",
-    codeforces: "https://codeforces.com/profile/23rajaditya",
+    github: "https://github.com/Abhirajsrivastava23",
+    linkedin: "https://www.linkedin.com/in/",
+    twitter: "https://x.com/home",
+    instagram: "https://www.instagram.com/?hl=en",
+    credly: "https://www.credly.com/users/abhiraj-srivastava.bc6731bf",
+    leetcode: "",
+    hackerrank: "",
+    codechef: "",
+    codeforces: "",
   },
 };
 
@@ -50,11 +52,11 @@ export const expertise = [
     title: "PROGRAMMING",
     description: "Establishing a robust programming foundation.",
     skills: [
-      { name: "Python", level: 50 },
-      { name: "C", level: 0 },
-      { name: "C++", level: 0 },
-      { name: "Java", level: 0 },
-      { name: "C# (.NET)", level: 0 },
+      { name: "Python", level: 92 },
+      { name: "C", level: 45 },
+      { name: "C++", level: 40 },
+      { name: "Java", level: 30 },
+      { name: "C# (.NET)", level: 25 },
     ],
   },
   {
@@ -62,10 +64,10 @@ export const expertise = [
     title: "FULL-STACK DEVELOPMENT",
     description: "Learning core concepts before moving to project building.",
     skills: [
-      { name: "Web Dev (HTML/CSS/JS/React)", level: 0 },
-      { name: "Backend (Node.js/REST)", level: 0 },
-      { name: "SQL Database", level: 0 },
-      { name: "Bash / Shell", level: 0 },
+      { name: "Web Dev (HTML/CSS/JS/React)", level: 85 },
+      { name: "Backend (Node.js/REST)", level: 45 },
+      { name: "SQL Database", level: 25 },
+      { name: "Bash / Shell", level: 95 },
     ],
   },
   {
@@ -73,9 +75,9 @@ export const expertise = [
     title: "AI & MACHINE LEARNING",
     description: "Preparing for AI/ML specialization track.",
     skills: [
-      { name: "Machine Learning", level: 20 },
-      { name: "MS Cloud (Azure)", level: 0 },
-      { name: "Competitive Programming", level: 0 },
+      { name: "Machine Learning", level: 82 },
+      { name: "MS Cloud (Azure)", level: 95 },
+      { name: "Competitive Programming", level: 25 },
     ],
   },
 ];
@@ -84,19 +86,19 @@ export const education = [
   {
     institution: "Chandigarh University,\nUttar Pradesh",
     degree: "B.Tech CSE (AI/ML) with Microsoft",
-    period: "2026 — 2030",
+    period: "2025 — 2029",
     cgpa: "Current",
     watermark: "CU",
   },
   {
-    institution: "B.N.T. ST. Mary's\nPublic School",
+    institution: "National Inter College",
     degree: "12th Standard",
     period: "Graduated",
     cgpa: "Completed",
     watermark: "12TH",
   },
   {
-    institution: "R K Public School",
+    institution: "National Inter College",
     degree: "10th Standard",
     period: "Graduated",
     cgpa: "Completed",
@@ -109,7 +111,7 @@ export const roadmap = [
     semester: 1,
     credits: 24,
     title: "Foundations",
-    date: "Jul 2026 → Dec 2026",
+    date: "Jul 2025 → Dec 2025",
     subjects: [
       "Engineering Mathematics",
       "Programming for Problem Solving",
@@ -124,7 +126,7 @@ export const roadmap = [
     semester: 2,
     credits: 25,
     title: "Python & DSA",
-    date: "Jan 2027 → Jun 2027",
+    date: "Jan 2026 → Jun 2026",
     subjects: [
       "Linear Algebra & Vector Calculus",
       "Programming In Python",
@@ -139,7 +141,7 @@ export const roadmap = [
     semester: 3,
     credits: 23,
     title: "Systems & Networks",
-    date: "Jul 2027 → Dec 2027",
+    date: "Jul 2026 → Dec 2026",
     subjects: [
       "System Design",
       "Computer Organization & Architecture",
@@ -154,7 +156,7 @@ export const roadmap = [
     semester: 4,
     credits: 23,
     title: "Full Stack & OOP",
-    date: "Jan 2028 → Jun 2028",
+    date: "Jan 2027 → Jun 2027",
     subjects: [
       "Object-Oriented Programming",
       "Algorithms & Data Structures II",
@@ -169,7 +171,7 @@ export const roadmap = [
     semester: 5,
     credits: 24,
     title: "ML & GenAI Intro",
-    date: "Jul 2028 → Dec 2028",
+    date: "Jul 2027 → Dec 2027",
     subjects: [
       "Machine Learning Fundamentals",
       "Introduction to Generative AI",
@@ -184,7 +186,7 @@ export const roadmap = [
     semester: 6,
     credits: 22,
     title: "Deep Learning & GANs",
-    date: "Jan 2029 → Jun 2029",
+    date: "Jan 2028 → Jun 2028",
     subjects: [
       "Deep Learning",
       "Generative Adversarial Networks",
@@ -199,7 +201,7 @@ export const roadmap = [
     semester: 7,
     credits: 16,
     title: "Advanced AI & Internship",
-    date: "Jul 2029 → Dec 2029",
+    date: "Jul 2028 → Dec 2028",
     subjects: [
       "Advanced Topics in Generative AI",
       "Ethical AI & Responsible Computing",
@@ -212,7 +214,7 @@ export const roadmap = [
     semester: 8,
     credits: 13,
     title: "Industry & Graduation",
-    date: "Jan 2030 → Jun 2030",
+    date: "Jan 2029 → Jun 2029",
     subjects: [
       "Elective II",
       "Seminar on Trends in GenAI",
@@ -232,16 +234,20 @@ export const achievements: Array<{
   description: string;
   images: string[];
   when: string;
+  credentialUrl?: string;
+  credlyUrl?: string;
 }> = [
   {
     number: "01",
-    title: "AI-900: Azure AI Fundamentals",
-    level: "Beginner",
-    difficultyText: "Very Easy",
-    difficultyStars: 1,
-    description: "First win. AI vocab. No code needed. Maps to Foundation & Application of AI course exactly.",
-    when: "Sem 1 end",
+    title: "Azure Administrator Associate",
+    level: "Associate",
+    difficultyText: "Certified",
+    difficultyStars: 4,
+    description: "Microsoft Certified: Azure Administrator Associate — Validating expertise in implementing, managing, and monitoring identity, governance, storage, compute, and virtual networks in cloud environments.",
+    when: "Certified",
     images: [],
+    credentialUrl: "https://learn.microsoft.com/en-in/users/abhirajsrivastava-3932/credentials/certification/azure-administrator?tab=credentials-tab",
+    credlyUrl: "https://www.credly.com/users/abhiraj-srivastava.bc6731bf",
   },
   {
     number: "02",
@@ -252,6 +258,7 @@ export const achievements: Array<{
     description: "Cloud basics. Every tech role asks this. Maps to Computer Ecosystem course.",
     when: "Sem 2 end",
     images: [],
+    credlyUrl: "https://www.credly.com/users/abhiraj-srivastava.bc6731bf",
   },
   {
     number: "03",
@@ -292,5 +299,90 @@ export const achievements: Array<{
     description: "CI/CD, deployment automation. Only if pursuing DevOps specialization.",
     when: "Sem 7-8 optional",
     images: [],
+  },
+];
+
+export interface ProjectItem {
+  id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  logo: string;
+  url: string;
+  status: string;
+  tags: string[];
+  metrics?: { label: string; value: string }[];
+  featured?: boolean;
+}
+
+export const projects: ProjectItem[] = [
+  {
+    id: "nexora-ai",
+    name: "NEXORA.AI",
+    tagline: "Transactional AI Website Builder & Canvas",
+    description:
+      "A transactional AI website builder that connects intelligent site planning, visual design editing, and deterministic compilation in one creative workflow. Plan with AI, refine visually, and export clean, production-ready website code.",
+    logo: "/nexora-logo.png",
+    url: "https://nexora-engineer.vercel.app/",
+    status: "Live on Vercel",
+    tags: [
+      "AI Website Builder",
+      "Deterministic Compiler",
+      "Multi-LLM Integration",
+      "Visual Canvas Engine",
+      "Next.js & TypeScript",
+    ],
+    metrics: [
+      { label: "Workflow", value: "AI + Visual" },
+      { label: "Compiler", value: "Deterministic" },
+      { label: "Architecture", value: "Transactional" },
+    ],
+    featured: true,
+  },
+  {
+    id: "fatafat-app",
+    name: "Fatafat delivery app",
+    tagline: "Celebrate. Gift. Indulge. Delivered Fatafat.",
+    description:
+      "A fast on-demand celebration delivery platform bringing handcrafted cakes, fresh floral bouquets, gourmet desserts, luxury chocolates, and festive gift hampers directly to doorsteps with seamless checkout.",
+    logo: "/fatafat-logo.png",
+    url: "https://www.fatafatapp.me/",
+    status: "Live in Production",
+    tags: [
+      "On-Demand Delivery",
+      "E-Commerce Platform",
+      "Next.js & React",
+      "Instant Checkout",
+      "Real-Time Catalog",
+    ],
+    metrics: [
+      { label: "Speed", value: "Lightning Fast" },
+      { label: "Catalog", value: "Cakes, Flowers & Gifts" },
+      { label: "Platform", value: "Full Stack Next.js" },
+    ],
+    featured: true,
+  },
+  {
+    id: "seeu-daters",
+    name: "SeeU Daters",
+    tagline: "Verified College Dating • Authentic Campus Connections",
+    description:
+      "A verified college dating platform engineered for authentic student connections. Features secure student verification, real-time match scoring, instant messaging, and campus-tailored discovery built by students, for students.",
+    logo: "/seeu-daters-logo.svg",
+    url: "https://www.cudaters.tech/",
+    status: "Live in Production",
+    tags: [
+      "College Dating Platform",
+      "Student Verification",
+      "Real-Time Chat",
+      "Matching Algorithm",
+      "React & Razorpay",
+    ],
+    metrics: [
+      { label: "Community", value: "College Students" },
+      { label: "Verification", value: "Campus Verified" },
+      { label: "Features", value: "Match & Real-time Chat" },
+    ],
+    featured: true,
   },
 ];

@@ -50,7 +50,7 @@ export function EducationSection() {
         className="mb-10 flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-8"
       >
         <motion.span variants={fadeUp} className="text-[#555] font-mono text-xs md:text-sm tracking-[0.2em] uppercase md:whitespace-nowrap">
-          04 // B.Tech Roadmap — All 8 Semesters (CU, 2026-2030)
+          04 // B.Tech Roadmap — All 8 Semesters (CU, 2025-2029)
         </motion.span>
         <motion.div variants={fadeUp} className="w-full md:flex-grow h-px bg-[#222]" />
       </motion.div>

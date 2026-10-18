@@ -100,7 +100,13 @@ export function ParticleText({
 
     // Wait for fonts to load before drawing
     document.fonts.ready.then(() => {
-      ctx.font = `bold ${textSize}px 'Chakra Petch', sans-serif`;
+      let currentSize = textSize;
+      ctx.font = `bold ${currentSize}px 'Chakra Petch', sans-serif`;
+      const textWidth = ctx.measureText(text).width;
+      if (textWidth > canvasWidth - 40) {
+        currentSize = Math.floor(currentSize * ((canvasWidth - 40) / textWidth));
+        ctx.font = `bold ${currentSize}px 'Chakra Petch', sans-serif`;
+      }
       ctx.textAlign = "left";
       ctx.textBaseline = "middle";
       

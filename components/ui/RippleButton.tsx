@@ -8,6 +8,7 @@ interface RippleButtonProps {
   target?: string;
   rel?: string;
   className?: string;
+  download?: string;
 }
 
 interface Ripple {
@@ -16,7 +17,7 @@ interface Ripple {
   id: number;
 }
 
-export function RippleButton({ children, href, target, rel, className = "" }: RippleButtonProps) {
+export function RippleButton({ children, href, target, rel, className = "", download }: RippleButtonProps) {
   const [ripples, setRipples] = useState<Ripple[]>([]);
   const ref = useRef<HTMLAnchorElement>(null);
   const nextId = useRef(0);
@@ -42,6 +43,7 @@ export function RippleButton({ children, href, target, rel, className = "" }: Ri
       href={href}
       target={target}
       rel={rel}
+      download={download}
       onClick={handleClick}
       className={`relative overflow-hidden ${className}`}
     >

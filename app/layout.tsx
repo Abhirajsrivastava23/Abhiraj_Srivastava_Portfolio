@@ -3,10 +3,11 @@ import "./globals.css";
 import { SmoothScrollProvider } from "@/components/layout/SmoothScrollProvider";
 import { CustomCursor } from "@/components/ui/CustomCursor";
 import { ScrollProgressSquare } from "@/components/ui/ScrollProgressSquare";
+import { siteConfig } from "@/constants/content";
 
 export const metadata: Metadata = {
-  title: "Aditya Raj — Portfolio",
-  description: "Portfolio of Aditya Raj — Aspiring Software Engineer and AI/ML Student.",
+  title: `${siteConfig.fullName} — Portfolio`,
+  description: `Portfolio of ${siteConfig.fullName} — ${siteConfig.title}.`,
 };
 
 export default function RootLayout({

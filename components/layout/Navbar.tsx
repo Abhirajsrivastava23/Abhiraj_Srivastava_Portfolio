@@ -23,10 +23,40 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [resumeText, setResumeText] = useState("Download CV");
 
-  const handleResumeClick = (e: React.MouseEvent) => {
+  const handleResumeClick = async (e: React.MouseEvent) => {
     e.preventDefault();
-    setResumeText("Available Soon");
-    setTimeout(() => setResumeText("Download CV"), 2500);
+    const pdfUrl = siteConfig.resumeUrl || "/Abhiraj_Srivastava_CV.pdf";
+    setResumeText("Downloading...");
+
+    try {
+      const response = await fetch(pdfUrl);
+      if (!response.ok) throw new Error("File fetch failed");
+      const blob = await response.blob();
+      const blobUrl = window.URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = blobUrl;
+      link.download = "Abhiraj_Srivastava_CV.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      setTimeout(() => {
+        window.URL.revokeObjectURL(blobUrl);
+      }, 3000);
+
+      setResumeText("Downloaded ✓");
+      setTimeout(() => setResumeText("Download CV"), 2500);
+    } catch {
+      // Fallback
+      const fallbackLink = document.createElement("a");
+      fallbackLink.href = pdfUrl;
+      fallbackLink.download = "Abhiraj_Srivastava_CV.pdf";
+      fallbackLink.target = "_blank";
+      document.body.appendChild(fallbackLink);
+      fallbackLink.click();
+      document.body.removeChild(fallbackLink);
+      setResumeText("Download CV");
+    }
   };
 
   useEffect(() => {
@@ -82,9 +112,11 @@ export function Navbar() {
 
           {/* Download PDF */}
           <div className="hidden md:flex items-center">
-            <motion.button
+            <motion.a
+              href={siteConfig.resumeUrl || "/Abhiraj_Srivastava_CV.pdf"}
+              download="Abhiraj_Srivastava_CV.pdf"
               onClick={handleResumeClick}
-              className="relative overflow-hidden flex items-center justify-center min-w-[140px] gap-2 bg-[#FF5C00] text-black text-xs font-bold px-5 py-2.5 rounded-full tracking-wider uppercase group"
+              className="relative overflow-hidden flex items-center justify-center min-w-[145px] gap-2 bg-[#FF5C00] text-black text-xs font-bold px-5 py-2.5 rounded-full tracking-wider uppercase group cursor-pointer"
               whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(255,92,0,0.4)" }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.2 }}
@@ -93,7 +125,7 @@ export function Navbar() {
               <div className="absolute inset-0 -translate-x-[150%] group-hover:translate-x-[150%] transition-transform duration-[1.2s] ease-in-out bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-12 z-0 pointer-events-none" />
               <Download size={14} className="relative z-10" />
               <span className="relative z-10">{resumeText}</span>
-            </motion.button>
+            </motion.a>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -127,16 +159,18 @@ export function Navbar() {
               {link.label}
             </motion.button>
           ))}
-          <motion.button
+          <motion.a
+            href={siteConfig.resumeUrl || "/Abhiraj_Srivastava_CV.pdf"}
+            download="Abhiraj_Srivastava_CV.pdf"
             onClick={handleResumeClick}
-            className="mt-4 flex items-center justify-center min-w-[180px] gap-2 bg-accent text-black text-sm font-semibold px-6 py-3 rounded-sm"
+            className="mt-4 flex items-center justify-center min-w-[180px] gap-2 bg-[#FF5C00] text-black text-sm font-bold px-6 py-3 rounded-full tracking-wider uppercase cursor-pointer"
             initial={{ opacity: 0 }}
             animate={{ opacity: menuOpen ? 1 : 0 }}
             transition={{ delay: 0.4 }}
           >
-            <Download size={14} />
-            {resumeText}
-          </motion.button>
+            <Download size={16} />
+            <span>{resumeText}</span>
+          </motion.a>
         </nav>
       </motion.div>
     </>

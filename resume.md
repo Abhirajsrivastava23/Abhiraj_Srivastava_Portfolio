@@ -1,7 +1,9 @@
-# Aditya Raj
-Ranchi, India | rajadityaaa23@gmail.com
-LinkedIn: https://www.linkedin.com/in/rajadityaaa23/
-GitHub: https://github.com/rajadityaaa23
+# Abhiraj Srivastava
+India | abhirajsrivastava6264@gmail.com
+LinkedIn: https://www.linkedin.com/in/
+GitHub: https://github.com/Abhirajsrivastava23
+X: https://x.com/home
+Instagram: https://www.instagram.com/?hl=en
 
 ## Summary
 Proactive pre-college student from Ranchi, dedicated to building a career in software engineering through self-discipline and continuous learning. Currently establishing a robust programming foundation in Python, C, and Full-Stack Development. I am navigating this phase independently with a clear destination—mastering full-stack development and machine learning—focusing on core concepts before moving to hands-on project building.
@@ -9,7 +11,7 @@ Proactive pre-college student from Ranchi, dedicated to building a career in sof
 ## Education
 **Chandigarh University, Uttar Pradesh**
 B.Tech CSE (AI/ML) with Microsoft Specialization
-*July 2026 – June 2030*
+*July 2025 – June 2029*
 - **Credits:** 170
 - **Status:** Joining July 2026
 

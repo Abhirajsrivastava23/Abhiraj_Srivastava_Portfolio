@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { siteConfig } from "@/constants/content";
-import { Github, Linkedin, Instagram, ArrowUpRight, Code2, Terminal, ChefHat, BarChart2 } from "lucide-react";
+import { Github, Linkedin, Instagram, ArrowUpRight, Code2, Terminal, ChefHat, BarChart2, Award } from "lucide-react";
 import { fadeUp, staggerContainer, viewportConfig } from "@/lib/animations";
 import { ParticleButton } from "@/components/ui/ParticleButton";
 import { RippleButton } from "@/components/ui/RippleButton";
@@ -14,11 +14,12 @@ export function Footer() {
     { icon: Linkedin, href: siteConfig.socials.linkedin, label: "LinkedIn" },
     { icon: XIcon, href: siteConfig.socials.twitter, label: "X" },
     { icon: Instagram, href: siteConfig.socials.instagram, label: "Instagram" },
+    { icon: Award, href: siteConfig.socials.credly, label: "Credly" },
     { icon: Code2, href: siteConfig.socials.leetcode, label: "LeetCode" },
     { icon: Terminal, href: siteConfig.socials.hackerrank, label: "HackerRank" },
     { icon: ChefHat, href: siteConfig.socials.codechef, label: "CodeChef" },
     { icon: BarChart2, href: siteConfig.socials.codeforces, label: "Codeforces" },
-  ];
+  ].filter((item) => Boolean(item.href));
 
   return (
     <footer id="contact" className="relative border-t border-[#1a1a1a] py-16 px-6 md:px-10 overflow-hidden">

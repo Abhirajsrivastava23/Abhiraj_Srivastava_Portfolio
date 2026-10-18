@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { siteConfig } from "@/constants/content";
 import { ScrambleText } from "@/components/ui/ScrambleText";
 import { ParticleText } from "@/components/ui/ParticleText";
-import { Github, Linkedin, Instagram, Code2, Terminal, ChefHat, BarChart2 } from "lucide-react";
+import { Github, Linkedin, Instagram, Code2, Terminal, ChefHat, BarChart2, Award } from "lucide-react";
 import { XIcon } from "@/components/ui/XIcon";
 import { useRef, useState, useEffect } from "react";
 import Image from "next/image";
@@ -58,11 +58,12 @@ export function HeroSection() {
     { icon: Linkedin, href: siteConfig.socials.linkedin, label: "LinkedIn" },
     { icon: XIcon, href: siteConfig.socials.twitter, label: "X" },
     { icon: Instagram, href: siteConfig.socials.instagram, label: "Instagram" },
+    { icon: Award, href: siteConfig.socials.credly, label: "Credly" },
     { icon: Code2, href: siteConfig.socials.leetcode, label: "LeetCode" },
     { icon: Terminal, href: siteConfig.socials.hackerrank, label: "HackerRank" },
     { icon: ChefHat, href: siteConfig.socials.codechef, label: "CodeChef" },
     { icon: BarChart2, href: siteConfig.socials.codeforces, label: "Codeforces" },
-  ];
+  ].filter((item) => Boolean(item.href));
 
   return (
     <section
@@ -97,7 +98,7 @@ export function HeroSection() {
         }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       >
-        ADITYA
+        {siteConfig.name}
       </motion.div>
 
       {/* Subtle radial gradient */}
@@ -131,7 +132,7 @@ export function HeroSection() {
                 onTouchStart={handleMobileTouch}
               >
                 <ParticleText 
-                  text="ADITYA RAJ" 
+                  text={siteConfig.fullName} 
                   canvasWidth={1600} 
                   canvasHeight={300} 
                   textSize={210} 
@@ -153,7 +154,7 @@ export function HeroSection() {
             <p
               className="mt-1.5 text-accent text-xs font-mono tracking-wider"
             >
-              Chandigarh University, UP • B.Tech CSE (AI/ML) • 2026–2030
+              Chandigarh University, UP • B.Tech CSE (AI/ML) • 2025–2029
             </p>
 
             {/* Bio */}
@@ -248,10 +249,10 @@ export function HeroSection() {
                 onTouchStart={handleMobileTouch}
               >
                 <Image
-                  src="/profile_new.png?v=20260821"
+                  src="/abhiraj.jpg?v=20261018"
                   fill
-                  alt="Aditya Raj"
-                  className={`object-cover object-top transition-all duration-700 ${isNameHovered ? 'grayscale-0' : 'grayscale hover:grayscale-0'}`}
+                  alt={siteConfig.fullName}
+                  className={`object-cover object-center transition-all duration-700 ${isNameHovered ? 'grayscale-0' : 'grayscale hover:grayscale-0'}`}
                   priority
                 />
                 {/* Edge blending vignette */}
@@ -282,7 +283,7 @@ export function HeroSection() {
                 animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
               >
-                <p className="font-display text-xl md:text-2xl text-accent">2026-2030</p>
+                <p className="font-display text-xl md:text-2xl text-accent">2025-2029</p>
                 <p className="text-[#555] text-xs font-mono tracking-wider mt-0.5">Batch</p>
               </motion.div>
 
